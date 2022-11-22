@@ -6,4 +6,6 @@
 
 
       DIAGRAMA DE CLASES
-      <img width="508" alt="diagramadeclasses" src="https://user-images.githubusercontent.com/9613461/203441386-4914887c-1b99-4eab-bc87-fbf39e256867.PNG">
+      
+
+<img width="508" alt="diagramadeclasses" src="https://user-images.githubusercontent.com/9613461/203441487-58eb6c48-aa66-4669-b077-90ba4105cfbf.PNG">
