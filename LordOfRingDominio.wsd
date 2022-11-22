@@ -16,14 +16,13 @@ Personaje *-- Vida
 Personaje *-- Armadura 
 Personaje *-up- Ataque
 Personaje *-up- goal
+goal *-- Battle
 
 TheLordOfTheRings *-right- Turn
 TheLordOfTheRings *-- Board
 
-Turn *-right- Movimiento 
-Board *-- Battle
-numeroTiros *-left- Battle
-numeroTiros *-up- Personaje
+Turn *-up- Movimiento 
+numeroTiros *-[dashed]- Battle
 Board *-- Batallones
 Batallones *-- Personaje
 Batallones *-- enCola
