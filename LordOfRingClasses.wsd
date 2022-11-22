@@ -12,11 +12,18 @@ class LordOfRings{
 class Personaje{
     -String id 
     -String name
+    -Integer vidas
     -Integer ataque
     -Integer defensa
     + String getString()
+    +void modificarDefensa()
 }
 
+class Battle{
+    +Integer numeroTiros
+    getWinner()
+    getLoser()
+}
 
 class Board{
     +Heroes
@@ -30,32 +37,19 @@ class Board{
 
 }
 
-class Heroes{
-    +void atacar()
-    +void defensa()
-}
-
-class Bestias{
-    +void atacar()
-    +void defensa()
-}
-
 class Turn{
-    +Movimientos movimientos
-    +Board board    
-    +Heroes heroes
-    +Bestias bestias
+    +Heroes
+    +Bestias
+    +Board
+    +Movimiento
     +void execute()
     +void executeTurn()
     +getWinner()
 }
 
-LordOfRings *--Board
-LordOfRings *--Turn
-LordOfRings *-- Personaje
-
-Personaje <|--Heroes
-Personaje <|-- Bestias
-
-
-@enduml
+class Batallones{
+    +Heroes
+    +Bestias
+    +getBatallonesEnCola()
+    +getBatallonesEnProceso()
+}
