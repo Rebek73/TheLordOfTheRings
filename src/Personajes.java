@@ -16,8 +16,9 @@ public abstract class Personajes {
         this.ataque = ataque;
         this.armadura = armadura;
         this.vida = vida;
-    }
 
+    }
+    abstract void atacar();
     public String getName() {
         return name;
     }
@@ -49,4 +50,8 @@ public abstract class Personajes {
     public void setVida(Integer vida) {
         this.vida = vida;
     }
+
+
+
+
 }
