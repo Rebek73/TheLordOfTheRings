@@ -1,7 +1,6 @@
-@startuml ElSeñordelosAnillos
+@startuml diagramaDominio
 
 TheLordOfTheRings *-- Personaje
-
 package "personajes"{
 Personaje <|-- Heroes
 Personaje <|-- Bestias
@@ -16,13 +15,13 @@ Personaje *-- Vida
 Personaje *-- Armadura 
 Personaje *-up- Ataque
 Personaje *-up- goal
-goal *-- Battle
+goal <-- Battle
 
 TheLordOfTheRings *-right- Turn
 TheLordOfTheRings *-- Board
 
 Turn *-up- Movimiento 
-numeroTiros *-[dashed]- Battle
+numeroTiros *-- Personaje
 Board *-- Batallones
 Batallones *-- Personaje
 Batallones *-- enCola
@@ -31,6 +30,5 @@ Battle o-right- Loser
 Personaje *-right- modificarDefensa
 
 Board <-- Turn
-
 
 @enduml
