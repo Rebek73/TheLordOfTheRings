@@ -3,10 +3,10 @@ package src;
 
 public abstract class Personajes {
 
-    protected String name;
-    protected Integer ataque;
-    protected Integer armadura;
-    protected Integer vida;
+    private String name;
+    private Integer ataque;
+    private Integer armadura;
+    private Integer vida;
 
     public Personajes(){
 

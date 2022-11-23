@@ -15,10 +15,11 @@ public class Heroes extends Personajes{
     @Override
     void tirarDados() {
 
-        int dado1 =(int) Math.random() * 100;
-        int dado2 =(int) Math.random() * 100;
+        int dado1 =(int) (Math.random() * 100);
+        int dado2 =(int) (Math.random() * 100);
 
-        super.ataque = (dado1 > dado2) ? dado1 : dado2;
+        super.setAtaque((dado1 > dado2) ? dado1 : dado2);
+
     }
 
 
