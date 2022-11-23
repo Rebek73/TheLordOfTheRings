@@ -14,6 +14,6 @@ public class Bestias extends Personajes{
         public void tirarDados() {
             int dado1 =(int) (Math.random() * 90);
 
-           // super.ataque = (dado1 > dado2) ? dado1 : dado2;
+           super.ataque = dado1;
         }
 }
