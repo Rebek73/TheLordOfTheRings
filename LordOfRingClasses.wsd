@@ -8,15 +8,35 @@ class LordOfRings{
     +showResults()
     +Personaje crearPersonaje()
 }
+LordOfRings *-- Personaje
+LordOfRings *-left- Board
 
-class Personaje{
+abstract Personaje{
     -String id 
     -String name
+    -Integer vidas
     -Integer ataque
     -Integer defensa
     + String getString()
+    +{abstract}void modificarDefensa()
 }
 
+class Orcos{
+
+}
+class Trasgos{}
+
+Orcos -up-|> Bestias
+Trasgos -up-|> Bestias
+
+Humanos -up-|> Heroes
+Hobbits -up-|> Heroes
+Elfos -up-|> Heroes
+
+LordOfRings *-right- Turn
+Personaje *-down- Batallones
+Bestias --|> Personaje
+Heroes --|> Personaje
 
 class Board{
     +Heroes
@@ -26,36 +46,21 @@ class Board{
     +getLoser()
     +void execute()
     -executeTurn()
-    +getWinner()
-
-}
-
-class Heroes{
-    +void atacar()
-    +void defensa()
-}
-
-class Bestias{
-    +void atacar()
-    +void defensa()
 }
 
 class Turn{
-    +Movimientos movimientos
-    +Board board    
-    +Heroes heroes
-    +Bestias bestias
+    +Heroes
+    +Bestias
+    +Board
+    +Movimiento
     +void execute()
     +void executeTurn()
     +getWinner()
 }
 
-LordOfRings *--Board
-LordOfRings *--Turn
-LordOfRings *-- Personaje
-
-Personaje <|--Heroes
-Personaje <|-- Bestias
-
-
-@enduml
+class Batallones{
+    +Heroes
+    +Bestias
+    +getBatallonesEnCola()
+    +getBatallonesEnProceso()
+}
