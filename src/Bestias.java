@@ -2,20 +2,20 @@ package src;
 
 public class Bestias extends Personajes{
 
-    public Bestias(){
-        super();
-    }
+        public Bestias(){
+            super();
+        }
 
-    public Bestias(String nombre, int ataque, int armadura, int vida){
-        super(nombre, ataque, ataque, vida);
-    }
+        public Bestias(String nombre, int ataque, int armadura, int vida){
+            super(nombre, ataque, ataque, vida);
+        }
 
+        @Override
+        public void tirarDados() {
 
-    @Override
-    void tirarDados() {
+            int dado1 =(int) Math.random() * 100;
+            int dado2 =(int) Math.random() * 100;
 
-        int dado = (int) Math.random() * 90;
-        super.ataque = dado;
-
-    }
+            super.ataque = (dado1 > dado2) ? dado1 : dado2;
+        }
 }
