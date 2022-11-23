@@ -46,8 +46,6 @@ class Board{
     +getLoser()
     +void execute()
     -executeTurn()
-    +getWinner()
-
 }
 
 class Turn{
