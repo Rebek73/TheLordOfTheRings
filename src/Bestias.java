@@ -12,7 +12,7 @@ public class Bestias extends Personajes{
 
 
     @Override
-    void atacar() {
+    void tirarDados() {
 
         int dado = (int) Math.random() * 90;
         super.ataque = dado;

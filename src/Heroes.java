@@ -13,7 +13,7 @@ public class Heroes extends Personajes{
     }
 
     @Override
-    void atacar() {
+    void tirarDados() {
 
         int dado1 =(int) Math.random() * 100;
         int dado2 =(int) Math.random() * 100;
