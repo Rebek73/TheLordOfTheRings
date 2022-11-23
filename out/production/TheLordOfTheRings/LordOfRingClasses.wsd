@@ -1,0 +1,66 @@
+@startuml LordOfRings
+
+class LordOfRings{
+    +Heroes
+    +Bestias
+    +void initGame()
+    +void play()
+    +showResults()
+    +Personaje crearPersonaje()
+}
+LordOfRings *-- Personaje
+LordOfRings *-left- Board
+
+abstract Personaje{
+    -String id 
+    -String name
+    -Integer vidas
+    -Integer ataque
+    -Integer defensa
+    + String getString()
+    +{abstract}void modificarDefensa()
+}
+
+class Orcos{
+
+}
+class Trasgos{}
+
+Orcos -up-|> Bestias
+Trasgos -up-|> Bestias
+
+Humanos -up-|> Heroes
+Hobbits -up-|> Heroes
+Elfos -up-|> Heroes
+
+LordOfRings *-right- Turn
+Personaje *-down- Batallones
+Bestias --|> Personaje
+Heroes --|> Personaje
+
+class Board{
+    +Heroes
+    +Bestias
+    +showBoard()
+    +getWinner()
+    +getLoser()
+    +void execute()
+    -executeTurn()
+}
+
+class Turn{
+    +Heroes
+    +Bestias
+    +Board
+    +Movimiento
+    +void execute()
+    +void executeTurn()
+    +getWinner()
+}
+
+class Batallones{
+    +Heroes
+    +Bestias
+    +getBatallonesEnCola()
+    +getBatallonesEnProceso()
+}
