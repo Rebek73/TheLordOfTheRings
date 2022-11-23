@@ -8,22 +8,35 @@ class LordOfRings{
     +showResults()
     +Personaje crearPersonaje()
 }
+LordOfRings *-- Personaje
+LordOfRings *-left- Board
 
-class Personaje{
+abstract Personaje{
     -String id 
     -String name
     -Integer vidas
     -Integer ataque
     -Integer defensa
     + String getString()
-    +void modificarDefensa()
+    +{abstract}void modificarDefensa()
 }
 
-class Battle{
-    +Integer numeroTiros
-    getWinner()
-    getLoser()
+class Orcos{
+
 }
+class Trasgos{}
+
+Orcos -up-|> Bestias
+Trasgos -up-|> Bestias
+
+Humanos -up-|> Heroes
+Hobbits -up-|> Heroes
+Elfos -up-|> Heroes
+
+LordOfRings *-right- Turn
+Personaje *-down- Batallones
+Bestias --|> Personaje
+Heroes --|> Personaje
 
 class Board{
     +Heroes
