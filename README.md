@@ -9,4 +9,4 @@
       DIAGRAMA DE CLASES
       
 
-<img width="508" alt="diagramadeclasses" src="https://user-images.githubusercontent.com/9613461/203447832-3d4cd420-5257-4fee-8695-3d16acafb5d6.PNG">
+<img width="609" alt="DIAGRAMA_CLASES" src="https://user-images.githubusercontent.com/9613461/203447874-076f5b0d-323a-43d2-9598-d32f1781d5da.PNG">
