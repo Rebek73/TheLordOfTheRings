@@ -12,8 +12,8 @@ public class Bestias extends Personajes{
 
         @Override
         public void tirarDados() {
-            int dado1 =(int) (Math.random() * 100);
-            int dado2 =(int) (Math.random() * 100);
+            int dado1 =(int) (Math.random() * 90);
+            int dado2 =(int) (Math.random() * 90);
 
             super.ataque = (dado1 > dado2) ? dado1 : dado2;
         }
