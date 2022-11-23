@@ -21,9 +21,7 @@ abstract Personaje{
     +{abstract}void modificarDefensa()
 }
 
-class Orcos{
-
-}
+class Orcos{}
 class Trasgos{}
 
 Orcos -up-|> Bestias
