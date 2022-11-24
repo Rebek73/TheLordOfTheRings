@@ -13,8 +13,9 @@ public class Elfos extends Heroes{
 
 
     @Override
-    void tirarDados() {
-        super.tirarDados();
+    int tirarDados() {
+        return super.tirarDados();
+
     }
 
     @Override

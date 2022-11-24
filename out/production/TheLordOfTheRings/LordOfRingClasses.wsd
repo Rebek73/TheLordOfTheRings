@@ -21,9 +21,13 @@ abstract Personaje{
     +{abstract}void modificarDefensa()
 }
 
+<<<<<<< HEAD
 class Orcos{
 
 }
+=======
+class Orcos{}
+>>>>>>> f9c9da9b05b890b7afc8eda08b64074513643359
 class Trasgos{}
 
 Orcos -up-|> Bestias

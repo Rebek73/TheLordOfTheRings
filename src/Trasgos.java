@@ -11,8 +11,8 @@ public class Trasgos extends Bestias{
     }
     
     @Override
-    public void tirarDados(){
-        super.tirarDados();
+    public int tirarDados(){
+        return super.tirarDados();
     }
 
     @Override

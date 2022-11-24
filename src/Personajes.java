@@ -18,7 +18,7 @@ public abstract class Personajes {
         this.vida = vida;
 
     }
-    abstract void tirarDados();
+    abstract int tirarDados();
     public String getName() {
         return name;
     }
