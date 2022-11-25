@@ -12,7 +12,9 @@ public class Turn {
     int bestiasMuertas = 0;
 
     public void batalla(Batallones batallones) throws InterruptedException {
-
+        
+        int ataqueHeroe = 0;
+        int ataqueArmadura=0;
 
         for (int i = 0; i < batallones.heroes.size(); i++){
 
@@ -40,9 +42,15 @@ public class Turn {
                     }
                     System.out.println("------------------------------------------------------------------");
                     System.out.println("------------------------------------------------------------------");
+                     if(ataqueHeroe> batallones.beasts.get(i).getArmadura()){
+                        ataqueArmadura= (batallones.beasts.get(i).getVida()-ataqueBestia-batallones.beasts.get(i).getArmadura());
+                        System.out.println("Daño a armadura de bestia: "+ ataqueArmadura);
+                    }if(ataqueBestia> batallones.heroes.get(i).getArmadura()){
+                        ataqueArmadura= (batallones.heroes.get(i).getVida()-ataqueBestia-batallones.heroes.get(i).getArmadura());
+                        System.out.println("Daño a armadura de heroe: "+ ataqueArmadura);
+                    }
 
                 }
-                int ataqueHeroe = 0;
 
                 if (batallones.heroes.get(i) instanceof  Hobbits){
 
