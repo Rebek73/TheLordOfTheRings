@@ -4,6 +4,7 @@ import java.util.Random;
 
 public class Heroes extends Personajes{
 
+
     public Heroes(){
         super();
     }
@@ -21,8 +22,6 @@ public class Heroes extends Personajes{
         return ((dado1 > dado2) ? dado1 : dado2);
 
     }
-
-
 
 
 }

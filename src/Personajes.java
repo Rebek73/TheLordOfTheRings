@@ -8,6 +8,8 @@ public abstract class Personajes {
     private Integer armadura;
     private Integer vida;
 
+    private boolean alive = true;
+
     public Personajes(){
 
     }
@@ -41,6 +43,14 @@ public abstract class Personajes {
 
     public void setArmadura(Integer armadura) {
         this.armadura = armadura;
+    }
+
+    public boolean isAlive() {
+        return alive;
+    }
+
+    public void setAlive(boolean alive) {
+        this.alive = alive;
     }
 
     public Integer getVida() {
